@@ -1,12 +1,8 @@
-all: Main
-main: 
-CC=gcc
-CFLAGS=-I.
-DEPS = hellomake.h
-OBJ = hellomake.o hellofunc.o
+all:
+	gcc -o main main.c
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+run: all
+	./main
 
-hellomake: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS)
+clean:
+	rm -f main
