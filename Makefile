@@ -1,3 +1,5 @@
+all: Main
+main: 
 CC=gcc
 CFLAGS=-I.
 DEPS = hellomake.h
